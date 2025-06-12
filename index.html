@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Networking Basics - Class 9 Computer Science</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <nav>
+      <a href="#" data-topic="communication">Communication</a>
+      <a href="#" data-topic="data-communication">Data Communication</a>
+      <a href="#" data-topic="tele-communication">Tele Communication</a>
+      <a href="#" data-topic="elements">Elements</a>
+      <a href="#" data-topic="data-communication-mode">Data Communication Mode</a>
+      <a href="#" data-topic="data-communication-medium">Data Communication Medium</a>
+      <a href="#" data-topic="network">What is Network</a>
+      <a href="#" data-topic="types-of-network">Types Of Network</a>
+      <a href="#" data-topic="networking-device">Networking Device</a>
+      <a href="#" data-topic="architecture-of-network">Architecture Of Network</a>
+      <a href="#" data-topic="layers-of-network">Layers of Network</a>
+      <a href="#" data-topic="topology">Topology</a>
+      <!-- Quiz Button for Nav on Small Screens (optional) -->
+      <a href="quiz.html" class="quiz-nav-btn"><i class="fa-solid fa-question-circle"></i> Take Quiz</a>
+    </nav>
+    <div class="container">
+      <!-- DASHBOARD START -->
+      <div class="dashboard">
+        <div class="dashboard-welcome">
+          <div>
+            <h2>Welcome, Student!</h2>
+            <p>Ready to learn about Networking? 🚀</p>
+          </div>
+          <img src="images/avatar.png" alt="Student Avatar" class="dashboard-avatar">
+        </div>
+
+        <!-- Features row -->
+        <div class="dashboard-features">
+          <div class="dashboard-feature">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Interactive Lessons</span>
+          </div>
+          <div class="dashboard-feature">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Quick Topic Popups</span>
+          </div>
+          <div class="dashboard-feature">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Progress Tracker</span>
+          </div>
+          <div class="dashboard-feature">
+            <i class="fa-solid fa-bullhorn"></i>
+            <span>Announcements</span>
+          </div>
+          <div class="dashboard-feature">
+            <i class="fa-solid fa-link"></i>
+            <span>Helpful Resources</span>
+          </div>
+        </div>
+
+        <div class="dashboard-widgets">
+          <div class="dashboard-widget">
+            <div class="widget-title">Topics Covered</div>
+            <div class="widget-value" id="topicsProgress">0 / 12</div>
+            <div class="widget-bar">
+              <div class="widget-bar-fill" id="topicsBar" style="width: 0%;"></div>
+            </div>
+          </div>
+          <div class="dashboard-widget">
+            <div class="widget-title">Next Event</div>
+            <div class="widget-value">Quiz on 2025-06-20</div>
+          </div>
+          <div class="dashboard-widget">
+            <div class="widget-title">Networking Tip</div>
+            <div class="widget-value" id="tipOfDay">The Internet is the largest WAN in the world!</div>
+          </div>
+          <div class="dashboard-widget">
+            <div class="widget-title">Helpful Link</div>
+            <a href="https://www.geeksforgeeks.org/computer-network-tutorials/" target="_blank">GFG Networking Tutorials</a>
+          </div>
+        </div>
+
+        <!-- Announcements -->
+        <div class="dashboard-announcements">
+          <div class="announcements-title"><i class="fa-solid fa-bullhorn"></i> Announcements</div>
+          <ul>
+            <li><strong>2025-06-18:</strong> <span>Mock Test scheduled for Friday!</span></li>
+            <li><strong>2025-06-15:</strong> <span>Assignment 3 is now available.</span></li>
+            <li><strong>2025-06-12:</strong> <span>New topic: Network Topologies.</span></li>
+          </ul>
+        </div>
+
+        <!-- Quick Search -->
+        <div class="dashboard-searchbox">
+          <input type="text" id="dashboardSearch" placeholder="Search topics..." autocomplete="off" />
+          <button id="dashboardSearchBtn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        </div>
+
+        <!-- Today's Goal (optional) -->
+        <div class="dashboard-goal">
+          <i class="fa-solid fa-flag-checkered"></i>
+          <span id="goalText">Today's Goal: Explore 3 new topics!</span>
+        </div>
+
+        <!-- Take Quiz Button -->
+        <div class="dashboard-quiz-btn-row">
+          <a href="quiz.html" class="dashboard-quiz-btn">
+            <i class="fa-solid fa-question-circle"></i> Take Quiz
+          </a>
+        </div>
+      </div>
+      <!-- DASHBOARD END -->
+
+      <header>
+        <h1>
+          <i class="fa-solid fa-network-wired"></i> Networking Basics
+          <span>Class 9</span>
+        </h1>
+      </header>
+      <p style="opacity:.7;margin-bottom:2em;">Click a topic to view detailed information in a popup card.</p>
+    </div>
+  </div>
+  <!-- Modal Popup for Details -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-card" id="modalCard">
+      <button class="modal-close" id="modalClose" title="Close">&times;</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
